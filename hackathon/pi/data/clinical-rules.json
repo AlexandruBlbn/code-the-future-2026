@@ -1,0 +1,48 @@
+{
+  "version": "AAP-2022-simplified",
+  "bodyTemperature": {
+    "severeHypothermia": { "max": 32.0, "severity": "critical" },
+    "moderateHypothermia": { "min": 32.0, "max": 36.0, "severity": "alert" },
+    "mildHypothermia": { "min": 36.0, "max": 36.5, "severity": "watch" },
+    "normothermia": { "min": 36.5, "max": 37.5, "severity": "normal" },
+    "hyperthermia": { "min": 37.5, "max": 38.5, "severity": "alert" },
+    "severeHyperthermia": { "min": 38.5, "severity": "critical" }
+  },
+  "airTemperature": { "min": 32.0, "max": 37.0 },
+  "humidity": { "min": 50.0, "max": 60.0 },
+  "pressure": { "min": 950.0, "max": 1050.0 },
+  "airQuality": {
+    "warning": 1500,
+    "critical": 2500,
+    "unit": "ppm_approx"
+  },
+  "light": {
+    "maxLux": 1000,
+    "note": "Avoid sustained bright light exposure on neonates"
+  },
+  "vibration": {
+    "warningG": 0.4,
+    "criticalG": 1.0,
+    "note": "Incubator vibration limits per ISO 11135"
+  },
+  "lidOpen": {
+    "maxSeconds": 30,
+    "distanceThresholdCm": 5.0
+  },
+  "heater": {
+    "minCurrentA": 0.1,
+    "nominalPowerW": 80
+  },
+  "timeToDamage": {
+    "hyperthermia": { "thresholdC": 38.5, "minutesToRisk": 10 },
+    "hypothermia": { "thresholdC": 36.0, "minutesToRisk": 15 },
+    "lidOpen": { "maxSeconds": 30 }
+  },
+  "physics": {
+    "newtonCoolingK_closed": 0.08,
+    "newtonCoolingK_open": 0.25,
+    "babyMassKg": 3.2,
+    "specificHeatJkgK": 3470,
+    "heaterPowerW": 80
+  }
+}
